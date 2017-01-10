@@ -1,0 +1,24 @@
+Week 1 Homework  
+ 
+Demonstrate a design use for each 2D transform we learned about, and explore some combinations of these transforms.   
+ 
+Create a new project using the Circus template. Commit it to a github repository. Remember, commit early and often.
+ 
+The document should have fixed header containing your name, and a grid of 8 square elements.
+
+Each one of these will contain an example of a 2D transform in action. The contents of each grid item must behave in the manner specified below. What those contents are is up to you - you can use pictures of giraffes, css shapes, text, etc. Try to consider how each transform could be useful when choosing content, e.g. rotating text is neat but not exactly useful or communicative, whereas translating an image can be useful in some situations.
+
+Element 1 should contain a child which demonstrates a translate on hover.
+
+Element 2 should contain a child which demonstrates a rotation on hover.
+
+Element 3 should contain a child which demonstrates a scale on hover.
+
+Element 4 should contain a child which demonstrates a skew on hover.
+
+Elements 5 - 7 should each demonstrate a combination of 2 or more translations at once on hover (rotation and scale, skew and translate, all four at once, etc). Take your time and have fun with these. Try to go for a range of different effects, from the subdued to the obnoxious.
+
+Element 8 should be based on another reveal or transition you find on a site from around the web. Look for some kind of interesting effect you want to try to recreate with transforms and other css properties. The only rule here is no javascript. Include a link to the site or demo you used for inspiration.
+
+
+Submit this assignment on Ringmaster and include a link to your Github repository.

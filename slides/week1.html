@@ -163,7 +163,7 @@
 				<section>
 					<section>
 						<h2>CSS Transforms</h2>
-						<p>Moving things around in 2D</p>
+						<p>Translate, Scale, Rotate, Skew</p>
 					</section>
 					<section>
 						<h2>Support</h2>
@@ -192,6 +192,18 @@
 	position: absolute;
 	left: 50%; /* relative to parent width */
 	transform: translateX(-50%); /* relative to element width */
+}
+
+					</code></pre>
+					</section>
+					<section>
+						<h2>Multiple Transforms</h2>
+						<p>Can apply multiple transforms at once</p>
+						<p>Still applied as one property</p>
+						<p>Order matters!</p>
+						<pre><code>
+.multi {
+	transform: scale(1.5) translateX(100%);
 }
 
 					</code></pre>
@@ -236,21 +248,9 @@
 					</code></pre>
 					<p>Can also be used for <a href="http://www.durimel.io/works/melanie-f">sweet scroll effects</a> and <a href="http://tympanus.net/codrops/2013/08/09/building-a-circular-navigation-with-css-transforms/">crazy menus.</a></p>
 					</section>
-					<section>
-						<h2>Multiple Transforms</h2>
-						<p>Can apply multiple transforms at once</p>
-						<p>Still applied as one property</p>
-						<pre><code>
-.multi {
-	transform: rotate(45deg) translateY(-25%);
-}
-
-					</code></pre>
-					</section>
 
 					<section>
-						<h2>That's a pain</h2>
-						<p>Yes, but the future is bright!</p>
+						<h2>The future of multiple transforms:</h2>
 						<p>Individual properties are <a href="https://twitter.com/simevidas/status/627956718098485248">coming to Chrome</a> maybe.</p>
 					</section>
 				</section>
