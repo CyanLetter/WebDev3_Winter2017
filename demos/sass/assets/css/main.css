@@ -1,0 +1,131 @@
+/* 
+==============================================
+CONTENT:	Project Name Here
+AUTHOR:		Your Name Here
+==============================================
+
+TABLE OF CONTENTS:
+
+1. Variables
+2. Main Layout
+3. Media Queries
+
+
+==============================================
+*/
+/* 1. Variables and Mixins ================================= */
+/* 2. Main Layout ================================= */
+* {
+  box-sizing: border-box; }
+
+body {
+  background: #d3d9e2;
+  font-family: Helvetica, Arial, Sans-serif; }
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700; }
+
+h2 {
+  font-size: 1.7rem;
+  font-weight: 700; }
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 12px auto; }
+
+h4 {
+  font-size: 1.2rem;
+  margin: 12px auto;
+  font-weight: 700; }
+
+p {
+  font-size: 1rem; }
+
+header {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden; }
+  @media only screen and (min-width: 640px) {
+    header {
+      height: 400px; } }
+  header img {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  header h1 {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+main {
+  position: relative;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 0 10px black; }
+
+.preamble {
+  padding: 40px; }
+  .preamble p {
+    width: 95%;
+    max-width: 580px;
+    margin: 10px auto;
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.3rem; }
+
+.features {
+  font-size: 0;
+  padding: 10px;
+  text-align: center; }
+  .features h2 {
+    text-align: center;
+    margin: 10px auto; }
+  .features .column {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    vertical-align: top; }
+  @media only screen and (min-width: 640px) {
+    .features .column {
+      width: 33.33333%;
+      max-width: 300px; } }
+
+.feature-group {
+  width: 100%;
+  height: 300px;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #747d8c; }
+  .feature-group h3 {
+    font-weight: 300; }
+  .feature-group p {
+    text-align: left; }
+
+.icon, .icon-circle, .icon-ring, .icon-leaf {
+  width: 50px;
+  height: 50px;
+  margin: 25px auto;
+  background: #ce006a; }
+
+.icon-circle {
+  border-radius: 25px; }
+
+.icon-ring {
+  background: none;
+  border-radius: 25px;
+  border: 5px solid #ce006a; }
+
+.icon-leaf {
+  border-radius: 25px 0 25px 0; }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,21 @@
+Take the page you created for last week's homework and convert it to use sass.
+
+Before you start on the rest of the assignment, make a sass folder and copy in the sass files from the circus starter project. Then, copy the css you have already written into that sass file. If you don't do this first, your css will get overwritten when gulp processes the sass file. If that does happen though, remember you can use github to revert your files to your last commit.
+
+Then make the following changes to your site:
+
+- Add a section with text describing the changes you make when converting your css to sass. Mention what you decide to nest and why, what variables you chose to extend, how you decided to divide up your file. Write in your thoughts on sass so far, both things you find useful and things you dislike. This section should be arranged into two columns at desktop sizes, and a single column at mobile sizes.
+
+- Make your 8-item grid responsive, if it isn't already. Your elements should go from 4 columns, to 2 columns, to 1 column as your site shrinks.
+
+You should then refactor the html and css you have already written to utilize the features of sass that we discussed in class. Use nesting to better define your grid items, extend a general grid item class so as not to use so many IDs, etc. At the minimum, your Sass file should contain examples of the following:
+
+- Nested style rules. No specific number here, just try to nest things in a way that is efficient and makes sense to you. This is one of Sass' handiest features.
+- At least two variables, one for a primary page color, one for a secondary accent or text color. If your page doesn't already use multiple colors like this, make it.
+- At least one inline media query. Bonus points if you use a mixin for this.
+- At least one partial Sass file included in your main file.
+- At least one mixin. This can be as simple or complex as you like. While the breakpoint mixin we discussed in class is useful, I encourage you to look online for other sass mixins as well.
+
+We will be looking at your sass files at the beginning of next class, in addition to the site itself. Keep in mind that the main goal of this assignment is to get you comfortable using Sass on a regular basis, so forus your effors on writing effective, reusable styles. I will look at your Sass files in future projects, but this is the best time to ask about best practices and figure out the parts that you like using. There are about a million bad habits you can develop while using sass, so let's try to address them early.
+
+Submit a link to the latest commit in your github repo.
