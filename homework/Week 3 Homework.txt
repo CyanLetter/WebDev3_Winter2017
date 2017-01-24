@@ -1,0 +1,10 @@
+Find a jQuery plugin that we did not cover in class, and design a simple webpage around it. If you choose a checkbox or slider plugin, you might create a simple survey page. A parallax plugin could lend itself to a simple blog post. An animation plugin could become a loading screen. Think of the page you are creating as part of a larger website or app.
+
+The content of your webpage is up to you, so long as you follow some guidelines:
+
+- Design counts here. Make it look good.
+- Define your page's purpose. This is as much about making a plugin useful as it is about getting it to work.
+- Don't just copy the demo example for the plugin. Modifying existing code is only so helpful. I want this to be a fresh implementation using the circus template.
+- If you find a plugin that wasn't suggested in the slides, include a link or other reference to how you found it. Sharing is caring.
+
+Submit this as a github repository.

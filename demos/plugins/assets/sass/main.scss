@@ -1,0 +1,170 @@
+/* 
+==============================================
+CONTENT:	Project Name Here
+AUTHOR:		Your Name Here
+==============================================
+
+TABLE OF CONTENTS:
+
+1. Main Layout
+2. Content
+
+==============================================
+*/
+
+
+
+/* 1. Main Layout ================================= */
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background: #ccc;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+
+.content {
+	background: white;
+	padding: 30px;
+	font-family: sans-serif;
+	width: 90%;
+	max-width: 600px;
+	margin: 30px auto;
+	border-radius: 10px;
+}
+
+
+
+/* 2. Content ================================= */
+
+.logo {
+	width: 60px;
+}
+
+h1 {
+	font-weight: 700;
+	font-size: 22pt;
+	margin: 15px 0;
+}
+
+p {
+	color: #777;
+	// margin: 10px 0;
+	line-height: 140%;
+}
+
+#scene {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.layer {
+	width: 100%;
+	height: 100%;
+	top: -5%;
+	left: -5%;
+
+	.background {
+		position: relative;
+		width: 110%;
+		height: 110%;
+		top: -5%;
+		left: -5%;
+		background-image: url('http://lorempixel.com/output/city-q-c-1024-1024-8.jpg');
+		background-size: cover;
+	}
+
+	.title {
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		text-shadow: 0 0 20px rgba(255,255,255,0.8);
+	}
+
+	.foreground {
+		position: relative;
+		width: 150%;
+		height: 80%;
+		top: 50%;
+		left: -25%;
+		background: rgba(255,255,255,0.9);
+		box-shadow: 0 0 20px rgba(0,0,0,0.5);
+	}	
+}
+
+.article-link {
+	width: 100%;
+	height: 200px;
+	text-align: left;
+	box-shadow: 0 0 4px rgba(0,0,0,0.5);
+	background-color: #ccc;
+
+	&:nth-child(2n + 2) {
+		background-color: #eee;
+	}
+
+	img {
+		width: 200px;
+		height: 200px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	a {
+		padding: 10px 20px;
+		color: black;
+		text-decoration: none;
+		font-size: 1.5rem;
+		font-weight: 700;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	a:hover {
+		color: #f922b9;
+	}
+}
+
+.scroll-button {
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 20px 40px;
+	background: #ccc;
+	color: black;
+	font-weight: 700;
+	text-transform: uppercase;
+	border-radius: 5px 5px 0 0;
+	cursor: pointer;
+
+	&:hover {
+		background: #f922b9;
+		color: white;
+	}
+
+	&.hidden {
+		display: none;
+	}
+}
+
+#up-button {
+	@extend .scroll-button;
+}
+
+#down-button {
+	@extend .scroll-button;
+}
+
