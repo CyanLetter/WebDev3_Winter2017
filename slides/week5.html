@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Web Dev 3 - Week 4</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Week 4</h1>
+					<h3>jQuery</h3>
+				</section>
+
+				<section>
+					<section>
+						<h2>What's jQuery?</h2>
+						<p>jQuery is javascript</p>
+						<p>The most popular javascript library.</p>
+						<p>A simpler way to do common things.</p>
+						<p>Fixed cross-browser issues.</p>
+						<p>Gave us easy DOM manipulation.</p>
+					</section>
+					<section>
+						<h2>Remember</h2>
+						<p>jQuery is no more powerful than regular javascript. Much like Sass is to CSS, jQuery just makes things easier.</p>
+					</section>
+					<section>
+						<h2>Adding jQuery</h2>
+						<p>Get your chosen version from <a href="http://jquery.com/">jQuery.com</a> </p>
+						<p>Must be loaded before other scripts that use it.</p>
+						<pre><code>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>$</h2>
+						<p>$ === jQuery</p>
+					</section>
+
+					<section>
+						<h2>Document Readiness</h2>
+						<p>Works like window.onload.</p>
+						<p>Fires before images load.</p>
+						<p>Are you ready kids?</p>
+						<pre><code>
+$( document ).ready(function() {
+ 	console.log( "Aye aye, Captain!" );
+});
+						</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Ok, what else can it do?</h2>
+						<p>You can select elements, much like CSS.</p>
+						<pre><code>
+$("#someID");
+
+$(".someClass");
+
+$(".someOtherClass p");
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Pseudo selectors as well.</h2>
+						<p></p>
+						<pre><code>
+$(".elementOne:visible");
+
+$(".elementOne:hidden");
+
+$("li:odd");
+
+$(".accordion:not(.open)");
+						</code></pre>
+						<a href="http://api.jquery.com/category/selectors/">Select all the things!</a>
+					</section>
+
+					<section>
+						<h2>We can manipulate our selection</h2>
+						<p>jQUery has many useful functions for <a href="https://api.jquery.com/category/manipulation/">DOM manipulation.</a> </p>
+						<p>We can also chain these together.</p>
+						<pre><code>
+$( "h1" ).html("Hello, World!");
+$( "h1" ).addClass( "greeting" );
+
+// is the same as
+
+$( "h1" ).html( "Hello, World!" ).addClass( "greeting" );
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>More manipulation!</h2>
+						<p>We can change an element's attributes and css properties as well.</p>
+						<pre><code>
+$("#link").attr("href", "http://heyyeyaaeyaaaeyaeyaa.com/");
+
+$(".circle").css("background-color", "red");
+						</code></pre>
+					</section>
+
+				</section>
+				<section>
+
+					<section>
+						<h2>Adding Interactivity</h2>
+						<p>Much more useful than :target</p>
+						<pre><code>
+$(".element").click( function() {
+	console.log("Clicked!");
+});
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>And?</h2>
+						<p>We can change things!</p>
+						<p>Also note that "this" refers to the triggered element.</p>
+						<pre><code>
+$(".element").click( function() {
+	$(this).html("Clicked");
+	$("#somethingElse").addClass("show");
+});
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>This is nifty!</h2>
+						<p>And it gets better!</p>
+						<p>Check out the toggle method. jQuery even shortens itself!</p>
+						<pre><code>
+$(".element").click( function() {
+	$(this).toggleClass("open");
+});
+						</code></pre>
+						<p>This is the basis for a simple accordion.</p>
+					</section>
+
+					<section>
+						<h2>More events</h2>
+						<p>..can be found <a href="http://api.jquery.com/category/events/">here!</a> </p>
+					</section>
+
+				</section>
+
+				<section>
+					
+					<section>
+						<h2>Reusable jQuery</h2>
+						<p>An example of keeping things DRY</p>
+					</section>
+
+					<section>
+						<h2>Remember Rule #1</h2>
+						<p>"Your code may be elegant, but mine f***ing works"</p>
+						<p>- Leon Fayer</p>
+					</section>
+
+					<section>
+						<h2>One snippet to rule them all</h2>
+						<p>Take an arbitrary number of buttons, use them to activate and deactivate an equal number of things.</p>
+					</section>
+
+					<section>
+						<h2>The javascript</h2>
+						<pre><code>
+$(".reveal-button").on("click", function(){
+
+  $(".reveal-button").removeClass("active");
+  $(this).addClass("active");
+  $(".reveal-content").removeClass("active");
+  $(".reveal-content").eq( $(this).index(".reveal-button") ).addClass("active");
+
+});	
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>What it Does</h2>
+						<p>Applies a css class to two elements</p>
+						<p>If you click the nth reveal-button, it will add the active class to the nth reveal-content element</p>
+						<p>Use css to determine what behavior this dictates</p>
+					</section>
+
+					<section>
+						<h2>Example CSS</h2>
+						<pre><code>
+.reveal-button { background: black; }
+.reveal-button.active { background: white; }
+
+.reveal-content { opacity: 0; }
+.reveal-content.active { opacity: 1; }
+						</code></pre>
+						<p>This is NOT the :active pseudoclass.</p>
+					</section>
+
+					<section>
+						<h2>The Power of Reusability</h2>
+						<p>Very generalized. You can make different efffects just by changing and adding CSS selectors.</p>
+						<p>Separation of concerns. Use javascript for interactivity, and CSS to control how that interactivity impacts the presentation.</p>
+						<p>Remember to write DRY code whenever possible</p>
+					</section>
+
+				</section>
+
+				<section>
+
+					<section>
+						<h2>Some inspirational resources:</h2>
+
+
+						<p><a href="http://www.paperandpaint.dk">Paper and Paint</a></p>
+
+						<p><a href="http://www.ginventory.co/">Ginventory</a></p>
+
+						<p><a href="https://woreport.wolffolins.com/">WO Report</a></p>
+
+						<p><a href="http://www.nytimes.com/interactive/2015/10/27/world/greenland-is-melting-away.html?_r=1">Greenland is Melting</a></p>
+
+						<p><a href="http://www.evanshalshaw.com/bondcars/">Bond Cars</a></p>
+
+						<p><a href="http://www.kennedyandoswald.com/">Kennedy and Oswald</a></p>
+
+						<p><a href="http://www.reverenddanger.com/">Reverend Danger</a></p>
+					</section>
+
+					<section>
+						<h2>Basic tools go a long way.</h2>
+						<p>Selectors - manipulate anything, anywhere.</p>
+						<p>add/remove/toggleClass - alter content and style</p>
+						<p>click, hover - interactive triggers</p>
+						<p>Mostly about using these tools smartly.</p>
+					</section>
+
+					<section>
+						<h2>That's jQuery</h2>
+						<p>...somewhat</p>
+						<p>You can do a lot with just these tools.</p>
+						<p>We will explore some of the more advanced possibilities next class, with plugins.</p>
+					</section>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,13 @@
+Create an html document demonstrating some complex CSS shapes, transitions, backgrounds. Use different assets than those we used in class.
+
+Section 1:
+This section should be a header banner with a layered background. Layer at least two background images overtop of each other. Add one of your favorite quotes as text overtop of the images.
+
+Section 2:
+In this section, you will create 3 unique icons using only CSS. These icons should shange shape in some way when you hover over them, much like the hamburger menu did in our demo. Think of icons that you regularly see, such as hearts or stars, as well as those you don't, like horseshoes and blue moons. Pseudo-elements can be extremely helpful here. Feel free to search for different methods of creating CSS shapes, and include any links you find helpful.
+
+Section 3:
+Sell out and make some space for an ad! This section should contain a fixed position background image, so it looks like you're seeing through the page into the background like one of those inline ads you see on news sites and blogs. This section should be less than the full height of your page, so you won't see the entire image at once. Add a drop shadow coming from the other sections to add to the depth.
+
+Section 4:
+In this section, create two unordered lists containing at least five items. Demonstrate a sequenced transition that reveals these list items. The items should not be visible by default, and should enter in a sequence when hovered over. Change the content between your two lists, as well as how they transition. e.g. if your first list is a set of circles, like in the Google Inbox example, make your second set individual words that form a sentence. 

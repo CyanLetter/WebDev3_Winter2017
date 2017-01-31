@@ -41,9 +41,98 @@ h1 {
   font-size: 22pt;
   margin: 15px 0; }
 
+.title {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.8); }
+
 p {
   color: #777;
   line-height: 140%; }
+
+nav .hamburger, nav .hamburger:before, nav .hamburger:after {
+  position: absolute;
+  background: white;
+  width: 50px;
+  height: 5px;
+  transition: 0.2s; }
+
+nav {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 70px;
+  height: 70px; }
+  nav .hamburger {
+    top: 35px;
+    left: 10px; }
+    nav .hamburger:before {
+      content: '';
+      top: -10px;
+      left: 0; }
+    nav .hamburger:after {
+      content: '';
+      top: 10px;
+      left: 0; }
+  nav ul {
+    margin: 70px 0; }
+  nav li {
+    position: relative;
+    margin: 5px 0;
+    padding: 10px 0;
+    width: 0;
+    overflow: hidden;
+    transition: 0.2s; }
+    nav li:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc(100% - 30px);
+      height: 100%;
+      background: rgba(255, 255, 255, 0.8); }
+    nav li:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-top: 43px solid rgba(255, 255, 255, 0.8);
+      border-right: 30px solid transparent; }
+    nav li:nth-of-type(2) {
+      transition-delay: 0.1s; }
+    nav li:nth-of-type(3) {
+      transition-delay: 0.2s; }
+  nav a {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 700; }
+    nav a:hover {
+      color: #ff0099; }
+  nav:hover {
+    width: 200px;
+    height: 400px; }
+    nav:hover .hamburger, nav:hover .hamburger:before, nav:hover .hamburger:after {
+      background: #ff0099; }
+    nav:hover .hamburger:before {
+      top: -15px; }
+    nav:hover .hamburger:after {
+      top: 15px; }
+    nav:hover li {
+      width: 200px;
+      padding: 10px 10px; }
+      nav:hover li:nth-of-type(2) {
+        transition-delay: 0.1s;
+        width: 169px; }
+      nav:hover li:nth-of-type(3) {
+        transition-delay: 0.2s;
+        width: 138px; }
 
 #scene {
   position: relative;
@@ -56,7 +145,7 @@ p {
   height: 100%;
   top: -5%;
   left: -5%; }
-  .layer .background {
+  .layer .background, .layer .foreground {
     position: relative;
     width: 110%;
     height: 110%;
@@ -64,21 +153,13 @@ p {
     left: -5%;
     background-image: url("http://lorempixel.com/output/city-q-c-1024-1024-8.jpg");
     background-size: cover; }
-  .layer .title {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8); }
   .layer .foreground {
-    position: relative;
-    width: 150%;
-    height: 80%;
-    top: 50%;
-    left: -25%;
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); }
+    width: 120%;
+    height: 120%;
+    top: -10%;
+    left: -10%;
+    background-image: radial-gradient(ellipse at center, transparent 0%, transparent 52%, rgba(0, 0, 0, 0.6) 100%), url("../img/stripe.png");
+    background-size: cover, auto; }
 
 .article-link {
   width: 100%;
@@ -92,7 +173,9 @@ p {
     width: 200px;
     height: 200px;
     display: inline-block;
-    vertical-align: middle; }
+    vertical-align: middle;
+    transform: translateX(-100%);
+    transition: 0.3s; }
   .article-link a {
     padding: 10px 20px;
     color: black;
@@ -100,9 +183,33 @@ p {
     font-size: 1.5rem;
     font-weight: 700;
     display: inline-block;
-    vertical-align: middle; }
+    vertical-align: middle;
+    transition: all 0.3s ease 0.3s;
+    transform: translateY(20px);
+    opacity: 0; }
+  .article-link.show img {
+    transform: translateX(0); }
+  .article-link.show a {
+    transform: translateY(0);
+    opacity: 1; }
   .article-link a:hover {
     color: #f922b9; }
+
+.full-page-bg, .clear-bg, .blur-bg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-attachment: fixed; }
+
+.clear-bg {
+  background-image: url("../img/building.jpg"); }
+
+.blur-bg {
+  background-image: url("../img/building-blur.jpg"); }
+  .blur-bg .title {
+    text-shadow: none;
+    color: white; }
 
 .scroll-button, #up-button, #down-button {
   position: fixed;

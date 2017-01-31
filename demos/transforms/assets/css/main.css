@@ -45,6 +45,11 @@ header {
 	width: 100%;
 	z-index: 10;
 	transition: 0.5s;
+	transition-delay: 0.5s; 
+}
+
+.gallery-item:hover img {
+	transition-delay: 0s; 
 }
 
 .gallery-item p {
@@ -53,6 +58,15 @@ header {
 	top: 50%;
 	width: 100%;
 	transition: 0.5s;
+	transition-delay: 0s; 
+	opacity: 0;
+	transform: translateY(50px);
+}
+
+.gallery-item:hover p {
+	transition-delay: 0.5s; 
+	opacity: 1;
+	transform: translateY(0);
 }
 
 #item-1:hover img {

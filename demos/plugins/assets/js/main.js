@@ -23,5 +23,16 @@ $(document).ready(function(){
 		offset: 'bottom-in-view'
 	});
 
+	$('.article-link').each(function(){
+		var appearWaypoint = new Waypoint({
+			element: $(this),
+			handler: function(){
+				this.element.addClass('show');
+			},
+			offset: 'bottom-in-view'
+		});
+	});
+	
+
 	MediumLightbox('.article-link figure');
 });

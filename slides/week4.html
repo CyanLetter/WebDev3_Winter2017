@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Week 4</h1>
+					<p>Transitions, Backgrounds,</p>
+					<p>and pseudo-elements!</p>
+				</section>
+
+				<section>
+					<h1>Transitions</h1>
+					<h3>Simple animation from point A to B</h3>
+				</section>
+
+				<section>
+					<section>
+						<h2>Properties</h2>
+						<pre><code>
+transition: width 1s ease 1s;
+
+/* is shorthand for */
+transition-property: width;
+transition-duration: 1s;
+transition-timing-function: ease;
+transition-delay: 1s;
+
+						</code></pre>
+					</section>
+					<section>
+						<h2>Triggers</h2>
+						<p>Any change to an element's properties.</p>
+						<p>Pseudo-classes such as :hover and :target.</p>
+						<p>Styles applied through media queries.</p>
+					</section>
+					<section>
+						<h2>transition-property</h2>
+						<p>Animatable properties only.</p>
+						<p>Generally only between absolute values.</p>
+						<p>Once again, these can be in a comma separated list.</p>
+						<pre><code>
+
+#div1 {
+	transition-property: width, height, transform;	
+}						
+
+						</code></pre>
+					</section>
+					<section>
+						<h2>transition-duration</h2>
+						<p>Duration of the transition.</p>
+						<p>Defaults to 0 - always specify this.</p>
+					</section>
+					<section>
+						<h2>transition-timing-function</h2>
+						<p>Giving life to transitions</p>
+						<pre><code>
+
+#div1 {transition-timing-function: linear;}
+#div2 {transition-timing-function: ease;}
+#div3 {transition-timing-function: ease-in;}
+#div4 {transition-timing-function: ease-out;}
+#div5 {transition-timing-function: ease-in-out;}
+#div6 {transition-timing-function: cubic-bezier(.19, .84, .82, .41);}
+
+						</code></pre>
+						<p><a href="http://cubic-bezier.com/">cubic-bezier.com/</a></p>
+					</section>
+					<section>
+						<h2>transition-delay</h2>
+						<p>Delay of the transition.</p>
+						<p>Can be used for simple sequencing.</p>
+					</section>
+					
+				</section>
+				<section>
+					<h2>Practical Applications</h2>
+					<p><a href="https://inbox.google.com">Google Inbox</a></p>
+					<ul>
+						<li>Fade In Up Sequence</li>
+						<li>Flip or Expand and Reveal</li>
+					</ul>
+					<p><a href="https://medium.com/@sophie_paxtonUX/stop-gratuitous-ui-animation-9ece9aa9eb97">Beware of Excess</a></p>
+				</section>
+				<section>
+					<section>
+						<h2>Backgrounds</h2>
+						<p></p>
+					</section>
+					<section>
+						<h2>Big Images Look Good</h2>
+						<a href="http://blog.intercom.io/has-visual-design-fallen-flat/">Every Agency Ever</a><br>
+						<p><a href="http://www.novolume.co.uk/blog/all-websites-look-the-same/">Something looks familiar...</a></p>
+						<a href="http://www.bkwld.com/">BKWLD</a><br>
+						<a href="http://hellomonday.com/">Hello Monday</a><br>
+						<a href="http://f5fest.com/">F5 Fest</a><br>
+						<a href="http://www.apple.com/mac-pro/">Apple Mac Pro</a><br>
+						
+					</section>
+					<section>
+						<h2>Where to find?</h2>
+						<p><a href="https://bootstrapbay.com/blog/free-stock-photos/">Here are some places...</a></p>
+					</section>
+					<section>
+						<h2>The Properties</h2>
+						<pre><code>
+#div1 {
+	background-color: transparent;
+	background-image: url('path/to/image.png');
+	background-repeat: repeat;
+	background-position: 0% 0%;
+	background-attachment: scroll;
+	background-size: auto;
+}
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>background-image</h2>
+						<p>Used for large images, patterns, and gradients</p>
+					</section>
+
+					<section>
+						<h2>background-repeat</h2>
+						<p>repeat, no-repeat, repeat-x, repeat-y</p>
+					</section>
+
+					<section>
+						<h2>background-position</h2>
+						<pre><code>
+#div1 {
+	background-image: url('path/to/image.png');
+	background-position: center top;
+}
+#div2 {
+	background-image: url('path/to/image.png');
+	background-position: 10% 20%;
+}
+#div3 {
+	background-image: url('path/to/image.png');
+	background-position: 30px 80px;
+}
+						</code></pre>
+						<p>defaults to 0% 0%</p>
+					</section>
+
+					<section>
+						<h2>background-size</h2>
+						<p>length, percentage, cover, contain</p>
+						<p>Undeclared values are set to auto</p>
+						<p>Be careful to maintain your proportions</p>
+
+						<pre><code>
+#div1 {
+	background-size: 200px 400px;
+}
+#div2 {
+	background-size: 100%;
+}
+#div3 {
+	background-size: cover;
+}
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>background-attachment</h2>
+						<p>scroll, local, fixed</p>
+						<pre><code>
+#div1 {
+	background-attachment: scroll;
+	/* Default, moves relative to entire document */
+}
+#div2 {
+	background-attachment: local;
+	/* Relative to its container */
+}
+#div3 {
+	background-attachment: fixed;
+	/* Relative to viewport, like fixed positioning */
+}
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Layering</h2>
+						<p>Can comma separate multiple backgrounds</p>
+						<p>Use for textures or effect layering</p>
+						<pre><code>
+
+#div1 {
+	background-image: 
+		url('top-image.png'),
+		url('next-image.png');
+	background-repeat: repeat, no-repeat;
+	background-size: auto, cover;
+}
+
+#div2 {
+	background-image:
+		linear-gradient(transparent, white),
+		url('image.png');
+		background-repeat: no-repeat;
+}
+						</code></pre>
+						<a href="http://www.patternify.com">Patternify for Backgrounds</a>
+					</section>
+
+					<section>
+						<h2>Intelligent Loading</h2>
+						<p>Only load the size you need</p>
+						<pre><code>
+#div1 {
+	/* Don't put in a background-image yet */
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+@media screen and (max-width: 480px) {
+	#div1 {
+		background-image: url('smaller-image.png');
+	}
+}
+
+@media screen and (min-width: 481px) {
+	#div1 {
+		background-image: url('bigger-image.png');
+	}
+}
+						</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>:before and :after</h2>
+						<p>Are very exciting!</p>
+						<p>Act like inline elements.</p>
+						<p>Require content property to generate.</p>
+						<p>Can't be used on 'replaced' elements.</p>
+					</section>
+					<section>
+						<h2>Content</h2>
+						<p>Values can be String, url(), attr(), counter(), open-quote, close-quote...</p>
+						<p>Special characters are <a href="http://character-code.com/">weird.</a>  </p>
+						<pre><code>
+
+.classOne:before {
+	content: "A String";
+}
+.classOne:before {
+	/* Copyright sign character code */
+	content: "\00A9";
+}
+.classTwo:before {
+	content: url('myImage.jpg');
+}
+.classThree:before {
+	content: attr(id);
+}
+						</code></pre>
+					</section>
+					<section>
+						<h2>Why should I care?</h2>
+						<p>It keeps your markup clean.</p>
+						<p>It gives you re-usable modules.</p>
+						<p>It helps remove the need for images.</p>
+						<p>It helps maintain the separation of style and content.</p>
+					</section>
+					<section>
+						<h2>What all we can do with them.</h2>
+						<p>Shapes<br>
+							drop caps<br>
+							quotation marks<br>
+							multiple borders / backgrounds<br>
+							multiple backgrounds<br>
+							that one clearfix hack</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>That's It</h2>
+					</section>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
