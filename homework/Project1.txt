@@ -1,0 +1,13 @@
+This is a somewhat larger project. You will have two weeks to complete this assignment.
+
+Build a site that reacts to the user in interesting ways. Demonstrate the use of at least two jQuery plugins.
+
+For content, pick a startup, kickstarter, or indiegogo project. Basically a small, focused project or product. Using information you gather about your chosen project, make a site dedicated to being a playground for engagement. Your goal is to showcase the project or startup you have chosen in an environment that is fun to engage with and impressive to view. The plugins you choose can have broad sweeping effects on the architecture of your site, like a parallax or scrolling plugin, or be something more detail-oriented, such as button click effect or text sizing plugin. Plugins that affect layout and content are also open - things like image galleries / carousels or grid tiles. 
+
+Remember that details and polish in interactivity are great at selling a site and gaining the trust and respect of your users, even if they don't realize it - a few small, interesting elements are more desirable than many large, sweeping changes. At the most, you should only have one plugin that makes serious changes to your site's architecture - the more complexity you try to layer, the more things are going to break. Lots of plugins don't play nicely with each other.
+
+Don't spend more time than necessary choosing a project or gathering information. This project is really more about exploring interactions, and at the end of the day, how your site functions in this project is more important than the thing it is talking about.
+
+Take a look through the lists of plugins and get an idea of what you want to build before you start actually building. It's important to find the right tools for the job before you start the job. If possible, email me or post the plugins you are planning to use on the discussion page so I can do a little research and be more helpful in the next class.
+
+Inevitably things will go wrong, plugins are not created equal and some may be harder to use or more broken than others. That's what next week's review will be for. I'm not expecting the site to be complete by next week, but you should have your idea roughed out and have at least attempted to integrate the plugins and interactivity you have chosen. We'll talk about working through the roadblocks you have hit as well as visual changes that will help bring everything together.

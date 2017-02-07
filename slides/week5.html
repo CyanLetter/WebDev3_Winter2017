@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Web Dev 3 - Week 4</title>
+		<title>Web Dev 3 - Week 5</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -43,8 +43,8 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Week 4</h1>
-					<h3>jQuery</h3>
+					<h1>Week 5</h1>
+					<h3>jQuery Fundamentals</h3>
 				</section>
 
 				<section>
@@ -53,8 +53,7 @@
 						<p>jQuery is javascript</p>
 						<p>The most popular javascript library.</p>
 						<p>A simpler way to do common things.</p>
-						<p>Fixed cross-browser issues.</p>
-						<p>Gave us easy DOM manipulation.</p>
+						<p>Easy DOM manipulation.</p>
 					</section>
 					<section>
 						<h2>Remember</h2>
@@ -78,7 +77,7 @@
 						<h2>Document Readiness</h2>
 						<p>Works like window.onload.</p>
 						<p>Fires before images load.</p>
-						<p>Are you ready kids?</p>
+						<p>Helps prevent FOUC</p>
 						<pre><code>
 $( document ).ready(function() {
  	console.log( "Aye aye, Captain!" );
@@ -116,9 +115,8 @@ $(".accordion:not(.open)");
 					</section>
 
 					<section>
-						<h2>We can manipulate our selection</h2>
 						<p>jQUery has many useful functions for <a href="https://api.jquery.com/category/manipulation/">DOM manipulation.</a> </p>
-						<p>We can also chain these together.</p>
+						<p>Since jQuery returns its selected elements, we can also chain these together.</p>
 						<pre><code>
 $( "h1" ).html("Hello, World!");
 $( "h1" ).addClass( "greeting" );
@@ -126,6 +124,14 @@ $( "h1" ).addClass( "greeting" );
 // is the same as
 
 $( "h1" ).html( "Hello, World!" ).addClass( "greeting" );
+						</code></pre>
+					</section>
+
+					<section>
+						<p>We need to get the DOM node itself to perform <a href="http://www.w3schools.com/TagS/ref_av_dom.asp">non-jQuery functions</a></p>
+						<pre><code>
+var video = $("#my-video")[0];
+video.pause();
 						</code></pre>
 					</section>
 
@@ -157,23 +163,10 @@ $(".element").click( function() {
 						<p>We can change things!</p>
 						<p>Also note that "this" refers to the triggered element.</p>
 						<pre><code>
-$(".element").click( function() {
-	$(this).html("Clicked");
-	$("#somethingElse").addClass("show");
-});
-						</code></pre>
-					</section>
-
-					<section>
-						<h2>This is nifty!</h2>
-						<p>And it gets better!</p>
-						<p>Check out the toggle method. jQuery even shortens itself!</p>
-						<pre><code>
-$(".element").click( function() {
+$(".element").on('click', function() {
 	$(this).toggleClass("open");
 });
 						</code></pre>
-						<p>This is the basis for a simple accordion.</p>
 					</section>
 
 					<section>
@@ -206,10 +199,10 @@ $(".element").click( function() {
 						<pre><code>
 $(".reveal-button").on("click", function(){
 
-  $(".reveal-button").removeClass("active");
-  $(this).addClass("active");
-  $(".reveal-content").removeClass("active");
-  $(".reveal-content").eq( $(this).index(".reveal-button") ).addClass("active");
+  $(".reveal-button").removeClass("show");
+  $(this).addClass("show");
+  $(".reveal-content").removeClass("show");
+  $(".reveal-content").eq( $(this).index(".reveal-button") ).addClass("show");
 
 });	
 						</code></pre>
@@ -218,7 +211,7 @@ $(".reveal-button").on("click", function(){
 					<section>
 						<h2>What it Does</h2>
 						<p>Applies a css class to two elements</p>
-						<p>If you click the nth reveal-button, it will add the active class to the nth reveal-content element</p>
+						<p>If you click the nth reveal-button, it will add the show class to the nth reveal-content element</p>
 						<p>Use css to determine what behavior this dictates</p>
 					</section>
 
@@ -226,12 +219,11 @@ $(".reveal-button").on("click", function(){
 						<h2>Example CSS</h2>
 						<pre><code>
 .reveal-button { background: black; }
-.reveal-button.active { background: white; }
+.reveal-button.show { background: white; }
 
 .reveal-content { opacity: 0; }
-.reveal-content.active { opacity: 1; }
+.reveal-content.show { opacity: 1; }
 						</code></pre>
-						<p>This is NOT the :active pseudoclass.</p>
 					</section>
 
 					<section>
