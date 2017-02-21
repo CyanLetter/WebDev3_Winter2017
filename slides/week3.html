@@ -162,9 +162,7 @@ $.scrollTo( { top: '200px', left: '50px'}, 400 );
 					<section>
 						
 						<h2>Waypoints</h2>
-						<p><a href="https://github.com/imakewebthings/jquery-waypoints">Old Github</a> </p>
-						<p><a href="https://github.com/imakewebthings/waypoints">New Github!</a> </p>
-						<p>Trigger arbitrary events once an element comes into view.</p>
+						<p><a href="https://github.com/imakewebthings/waypoints">Github!</a> </p>
 						<pre><code>
 
 <script src="/path/to/jquery.waypoints.min.js"></script>
@@ -176,13 +174,78 @@ $.scrollTo( { top: '200px', left: '50px'}, 400 );
 					<section>
 						
 						<h2>Basic Waypoint</h2>
-						<p>The documentation is complicated. Usage is simple.</p>
+						<p>Seems complex, until you read the documentation in depth.</p>
 						<pre><code>
 
+// the method
+waypoint(function);
+
+//or...
+waypoint(function, options);
+
+// or just...
+waypoint(options)
+
+						</code></pre>
+
+					</section>
+
+					<section>
+						
+						<h2>Break it down</h2>
+						<p>The first one</p>
+						<pre><code>
 $(".place-to-trigger").waypoint(function(){
-
 	// do stuff
+});
 
+						</code></pre>
+
+					</section>
+
+					<section>
+						
+						<p>The second one</p>
+						<pre><code>
+// basic
+$(".place-to-trigger").waypoint( function(){}, {} );
+
+// formatted
+$(".place-to-trigger").waypoint(function(){
+	// do stuff
+}, {
+	offset: '25%' // trigger when 25% up the page
+});
+
+						</code></pre>
+						<p><a href="http://imakewebthings.com/waypoints/api/offset-option/">Options</a></p>
+
+					</section>
+
+					<section>
+						<p>The third one</p>
+						<pre><code>
+$(".place-to-trigger").waypoint({
+	handler: function(){
+		// do stuff
+	},
+	offset: '25%'
+});
+
+						</code></pre>
+
+					</section>
+
+					<section>
+						<p>Another way to do the third one</p>
+						<pre><code>
+function thingToDoOnWaypoint() {
+	// stuff!
+};
+
+$(".place-to-trigger").waypoint({
+	handler: thingToDoOnWaypoint,
+	offset: '25%'
 });
 
 						</code></pre>

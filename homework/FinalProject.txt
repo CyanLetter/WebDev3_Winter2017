@@ -1,0 +1,25 @@
+Create a website that tells a story about a corporate foundation or social responsibility initiative. The last project was about the little guy, this one is about the major players.
+ 
+Choose a corporate entity that sponsors its own foundation or social responsibility initiative, and create a website that builds a narrative about that foundation's activities and goals.
+You can treat your final site as an advanced 'what we do' page, which will present a handful of statistics and events that demonstrate your chosen foundation's role.
+You may also narrow your focus to a specific initiative or effort, and communicate the story and significance of that initiative. A narrower focus will allow you to focus more tightly on a curated interactive experience, rather than efficiently presenting loads of information.
+ 
+Examples of corporate foundations include the Coca-Cola Foundation and the 3M Foundation. Most large corporations will have something like this. A list of some of the largest can be found here: foundationcenter.org/findfunders/topfunders/top50giving.html   
+ 
+A definition of corporate social responsibility can be found here: www.hks.harvard.edu/m-rcbg/CSRI/init_define.html
+Examples include Apple's initiatives to educate the workers in its supply chain, or Chevron making efforts to preserve the environment.   
+ 
+Goals:
+ - Build a functional website promoting your corporate foundation or initiative.
+ - Narrow the information you want to present to an easily digestible length. Short, punchy facts are what I'm looking for. If you are bored by the information, everyone will be bored by the information.
+ - Use modern web technologies and plugins that we have learned in this class to present facts and numbers in an interesting manner. Hook us with entertainment, so we don't realize we are learning.
+- Create wireframes and lay out a project architecture ahead of time to keep your development clean and focused. Remember to think about reusable parts of your site.
+ - Use large imagery, video, typography, and scroll effects such as parallax and animation triggers to build an interesting and expressive environment for your story to live within. You are not simply building a website, you are building an experience to send a message.
+ 
+Notes:
+ - Think about the graphical treatments and behaviors you see in infographics.
+ - The viewport is a playground than can respond to the user's presence. Think about how you can use the web technologies we have learned to react to the user's presence, be that with hover effects, scroll effects, etc.
+ - How smoothly your navigation functions is important. Be it scrolling or anchor tags, make sure to consider the navigation and transition between sections / areas in your overall experience.
+ - As always, keep your code concise. How you achieve certain layouts and effects is as important as what those effects are. Stay DRY. Code efficiency will contribute to your grade.
+ - Make sure the effects you employ function smoothly and reliably. One or two well-functioning effects look better than a mass of horrible jankiness.
+ - The functionality of the site is more important than the message itself. I am requiring this to be tied to an existing corporate entity so that much of the branding, copywriting, and imagery will have already been created. Draw anything you can from the existing corporate culture to make your life easier - color schemes, fonts, logos, stock images, videos. The idea is to take information that already exists, and cut it into something that people can get excited about.
