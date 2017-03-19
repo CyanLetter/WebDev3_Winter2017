@@ -103,7 +103,7 @@
 					</section>
 					<section>
 						<h2>Video Attributes</h2>
-						<p>height, width, controls, autoplay, loop, muted, poster, preload</p>
+						<p>controls, autoplay, loop, muted, poster, preload, playsinline</p>
 						<p>Many of these are boolean attributes</p>
 						<pre><code>
 <!-- Video loops, plays automatically, silently, without controls -->
@@ -129,6 +129,13 @@ video {
 	min-height: 100%;
 	transform: translate(-50%, -50%);
 }
+						</code></pre>
+					</section>
+					<section>
+						<h2>Mobile</h2>
+						<p>Autoplay only works in <a href="https://webkit.org/blog/6784/new-video-policies-for-ios/">specific situations</a></p>
+						<pre><code>
+<video src="video.mp4" autoplay muted playsinline></video>
 						</code></pre>
 					</section>
 					<section>
